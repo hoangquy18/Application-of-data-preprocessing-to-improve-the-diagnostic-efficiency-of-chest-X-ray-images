@@ -7,10 +7,28 @@ Use preprocessing techniques to highlight the lung regions to classify lung dise
 
 ## Preprocess
 ### Background Removal
-![bg_rm](images/bg_rm.png)
+<img src="images/bg_rm.png" width=50% height=50%>
 
 ### Diaphragm Removal
-![dp_rm](images/dp_rm.png)
+<img src="images/dp_rm.png" width=50% height=50%>
 
 ### Contrast Enrichment
-![ct_rm](images/contrast_rm.png)
+<img src="images/contrast_rm.png" width=50% height=50%>
+
+## Experiment
+### NIH dataset
+| Model | Without Preprocessing  | Preprocessing | 
+|:-------------| :-------------: | :-------------: | 
+|Dense121| 49.38 | **55.46** | 
+|VGG19 | 62.91 | **64.50**  | 
+|EfficientNetV2| 68.81 | **69.21** |
+|ConvNeXt | 75.60 | **77.22** |
+
+### CheXpert-small
+| Model | Without Preprocessing  | Preprocessing | 
+|:-------------| :-------------: | :-------------: | 
+|Dense121| 65.16 | **68.39** | 
+|VGG19 | **63.59** | 60.98  | 
+|EfficientNetV2| 66.45 | **68.64** |
+|ConvNeXt | 68.21 | **73.84** |
+
